@@ -273,6 +273,10 @@ function copyLink() {
   setTimeout(() => { el.style.display = 'none'; }, 2500);
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeader();

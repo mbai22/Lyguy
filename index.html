@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyguy — Pressbook officiel | Afrobeat · RnB · Tchad</title>
+  <meta name="description" content="Pressbook officiel de Lyguy (Aldom Guy Laohonda), artiste auteur-compositeur-interprète tchadien. Bio, discographie, galerie, agenda et contact." />
+  <meta property="og:title" content="Lyguy — Pressbook officiel" />
+  <meta property="og:description" content="Artiste afrobeat tchadien — Bio, discographie, galerie, agenda et contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lyguy.com" />
+  <meta property="og:image" content="img/hero-bg.jpg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+</head>
+<body>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container inner">
+      <a class="logo" onclick="navigate('home')" style="cursor:pointer">
+        <span class="logo-text">LYGUY</span>
+      </a>
+      <nav class="nav-links">
+        <a onclick="navigate('home')">Accueil</a>
+        <a onclick="navigate('bio')">Bio</a>
+        <a onclick="navigate('univers')">Univers</a>
+        <a onclick="navigate('disco')">Discographie</a>
+        <a onclick="navigate('boutique')">Boutique</a>
+        <a onclick="navigate('galerie')">Galerie</a>
+        <a onclick="navigate('actualite')">Actualité</a>
+        <a onclick="navigate('home');setTimeout(()=>document.getElementById('booking-section')?.scrollIntoView({behavior:'smooth'}),100)">Booking</a>
+      </nav>
+      <button class="hamburger" id="menu-toggle" aria-label="Menu"><i class="ph ph-list" style="font-size:24px"></i></button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav>
+      <a onclick="navigate('home')">Accueil</a>
+      <a onclick="navigate('bio')">Bio</a>
+      <a onclick="navigate('univers')">Univers</a>
+      <a onclick="navigate('disco')">Discographie</a>
+      <a onclick="navigate('boutique')">Boutique</a>
+      <a onclick="navigate('galerie')">Galerie</a>
+      <a onclick="navigate('actualite')">Actualité</a>
+      <a onclick="navigate('home');setTimeout(()=>document.getElementById('booking-section')?.scrollIntoView({behavior:'smooth'}),100)">Booking</a>
+    </nav>
+  </div>
+
+  <!-- ==================== HOME ==================== -->
+  <div id="page-home" class="page active">
+
+    <section id="hero">
+      <div class="overlay">
+        <img src="img/hero-bg.jpg" alt="Lyguy" onerror="this.src='img/hero-fallback.jpg'" style="width:100%;height:100%;object-fit:cover" />
+        <div class="tint"></div>
+        <div class="gradient"></div>
+      </div>
+      <div class="content">
+        <h1>Lyguy.</h1>
+        <p class="hero-tagline">Originaire du Tchad, Lyguy fusionne afrobeat et RnB pour créer un univers musical unique porté par l'espoir et l'authenticité.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" onclick="navigate('bio')">Découvrir</a>
+          <a class="btn btn-outline" onclick="navigate('home');setTimeout(()=>document.getElementById('booking-section')?.scrollIntoView({behavior:'smooth'}),100)">Booking</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio-section" class="home-section">
+      <div class="container">
+        <div class="bio-grid">
+          <div class="bio-main fade-left">
+            <h2 class="section-title">Bio</h2>
+            <p class="bio-subtitle">L'artiste</p>
+            <p class="bio-text">Lyguy (Aldom Guy Laohonda) est un artiste auteur-compositeur-interprète tchadien, figure de proue de la nouvelle génération musicale africaine. Né à Yaoundé en 1998, il débute sur scène dès l'adolescence et entre en studio en 2017. Sa percée arrive en 2022 avec «Dieu ne dort pas» qui franchit le million de vues.</p>
+            <button class="btn btn-primary" onclick="navigate('bio')" style="margin-top:1.5rem">Voir la bio complète <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+          </div>
+          <div class="bio-image-wrap fade-right">
+            <img src="img/bio.jpg" alt="Lyguy portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:1rem" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="univers-section" class="home-section" style="background:var(--primary);color:var(--primary-foreground)">
+      <div class="container" style="text-align:center">
+        <h2 class="section-title">Univers <span class="text-secondary">artistique</span></h2>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.125rem;margin-bottom:2rem">Son, message, influences — l'univers de Lyguy.</p>
+        <button class="btn btn-primary" onclick="navigate('univers')">Explorer l'univers <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+      </div>
+    </section>
+
+    <section id="disco-section" class="home-section">
+      <div class="container">
+        <h2 class="section-title">Discographie</h2>
+        <p class="section-subtitle">Albums & EP</p>
+        <div class="discography-grid">
+          <div class="disco-card fade-up delay-1">
+            <div class="disco-cover"><img src="img/tchad.jpg" alt="TCHAD" loading="lazy" /></div>
+            <div class="disco-card-header"><span class="disco-badge">Album</span></div>
+            <h3 class="disco-title">TCHAD</h3>
+            <p class="disco-meta">2018 · 10 titres</p>
+            <p class="disco-desc">Premier album de Lyguy, un projet de 10 titres qui pose les fondations de son univers afrobeat aux sonorités tchadiennes.</p>
+            <div class="disco-links">
+              <a href="#" class="disco-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i> Apple Music</a>
+              <a href="#" class="disco-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i> YouTube</a>
+              <a href="#" class="disco-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotify</a>
+            </div>
+          </div>
+          <div class="disco-card fade-up delay-2">
+            <div class="disco-cover"><img src="img/aba.jpg" alt="ABA" loading="lazy" /></div>
+            <div class="disco-card-header"><span class="disco-badge">EP</span></div>
+            <h3 class="disco-title">ABA</h3>
+            <p class="disco-meta">2022 · 6 titres</p>
+            <p class="disco-desc">EP de 6 titres porté par le hit «Dieu ne dort pas». Yamo, Nebah, Fortification, Salanga, Mariama.</p>
+            <div class="disco-links">
+              <a href="#" class="disco-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i> Apple Music</a>
+              <a href="#" class="disco-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i> YouTube</a>
+              <a href="#" class="disco-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotify</a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem">
+          <button class="btn btn-primary" onclick="navigate('disco')">Voir toute la discographie <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="actus-section" class="home-section" style="background:var(--secondary);color:var(--secondary-foreground)">
+      <div class="container">
+        <h2 class="section-title">Actualités</h2>
+        <p class="section-subtitle">Articles, interviews et chroniques Lyguy</p>
+        <div class="actus-cards" id="actusCarousel">
+          <div class="actus-card">
+            <div class="actus-visual"><img src="img/gallery-05.jpg" alt="RFI" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">RFI</span>
+              <span class="actus-date">7 août 2022</span>
+              <h4>Lyguy, le tchadien qui monte</h4>
+              <p>Portrait de l'artiste tchadien Lyguy, révélation afrobeat qui enchaîne les succès avec son single «Dieu ne dort pas».</p>
+            </div>
+          </div>
+          <div class="actus-card">
+            <div class="actus-visual"><img src="img/gallery-06.jpg" alt="People237" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">People237</span>
+              <span class="actus-date">2022</span>
+              <h4>Lyguy : la nouvelle sensation de la musique tchadienne</h4>
+              <p>Rencontre avec l'artiste qui fait danser le Tchad et au-delà avec son afrobeat moderne et ses textes porteurs d'espoir.</p>
+            </div>
+          </div>
+          <div class="actus-card">
+            <div class="actus-visual"><img src="img/gallery-07.jpg" alt="CamerounActu" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">CamerounActu</span>
+              <span class="actus-date">2022</span>
+              <h4>Dieu ne dort pas : le tube qui propulse Lyguy au sommet</h4>
+              <p>Analyse du phénomène «Dieu ne dort pas» et de l'ascension fulgurante de Lyguy sur la scène musicale africaine.</p>
+            </div>
+          </div>
+          <div class="actus-card">
+            <div class="actus-visual"><img src="img/gallery-08.jpg" alt="DTV Awards" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">DTV Awards</span>
+              <span class="actus-date">2023</span>
+              <h4>Lyguy multi-récompensé aux DTV Awards</h4>
+              <p>L'artiste tchadien repart avec plusieurs distinctions, confirmant son statut de figure montante de la musique au Tchad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <div class="carousel-dots" id="actusDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" data-carousel="actusCarousel" data-dir="-1">←</button>
+            <button class="carousel-arrow" data-carousel="actusCarousel" data-dir="1">→</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem">
+          <button class="btn btn-dark" onclick="navigate('actualite')">Voir toute l'actualité <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery-section" class="home-section" style="background:var(--primary);color:#fff">
+      <div class="container">
+        <h2 class="section-title" style="color:#fff">Galerie</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">Photos haute résolution pour utilisations éditoriales et promotionnelles.</p>
+        <div class="home-gallery" id="homeGallery">
+          <div class="home-gallery-slide"><img src="img/gallery-01.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-02.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-03.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-04.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-05.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-06.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-07.jpg" alt="Lyguy" loading="lazy" /></div>
+          <div class="home-gallery-slide"><img src="img/gallery-08.jpg" alt="Lyguy" loading="lazy" /></div>
+        </div>
+        <div class="carousel-nav">
+          <div class="carousel-dots" id="galleryDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" data-carousel="homeGallery" data-dir="-1">←</button>
+            <button class="carousel-arrow" data-carousel="homeGallery" data-dir="1">→</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem">
+          <button class="btn btn-primary" onclick="navigate('galerie')">Voir toute la galerie <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="boutique-section" class="home-section">
+      <div class="container">
+        <h2 class="section-title">Boutique</h2>
+        <p class="section-subtitle">Albums, packs et produits dérivés Lyguy</p>
+        <div class="boutique-grid" id="boutiqueCarousel">
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/tchad.jpg" alt="TCHAD" loading="lazy" /></div>
+            <div class="boutique-badge">Album</div>
+            <div class="boutique-body"><h4>TCHAD</h4><span class="boutique-price">10 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20TCHAD" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/aba.jpg" alt="ABA" loading="lazy" /></div>
+            <div class="boutique-badge">EP</div>
+            <div class="boutique-body"><h4>ABA</h4><span class="boutique-price">8 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20ABA" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/tchad.jpg" alt="Pack TCHAD + ABA" loading="lazy" /></div>
+            <div class="boutique-badge">Pack</div>
+            <div class="boutique-body"><h4>Pack TCHAD + ABA</h4><span class="boutique-price">15 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20Pack%20TCHAD%20%2B%20ABA" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/gallery-11.jpg" alt="Poster Lyguy" loading="lazy" /></div>
+            <div class="boutique-badge">Merch</div>
+            <div class="boutique-body"><h4>Poster Lyguy</h4><span class="boutique-price">7 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20Poster%20Lyguy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <div class="carousel-dots" id="boutiqueDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" data-carousel="boutiqueCarousel" data-dir="-1">←</button>
+            <button class="carousel-arrow" data-carousel="boutiqueCarousel" data-dir="1">→</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem">
+          <button class="btn btn-primary" onclick="navigate('boutique')">Voir toute la boutique <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking-section" class="home-section">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center">Contact / <span class="text-secondary">Booking</span></h2>
+        <p class="section-subtitle" style="text-align:center">Réservez Lyguy ou proposez une collaboration.</p>
+        <div class="contact-grid">
+          <div class="contact-card fade-left">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:1.5rem;color:var(--secondary)">Coordonnées</h3>
+            <div class="contact-info-item">
+              <div class="icon"><i class="ph ph-envelope" style="font-size:20px"></i></div>
+              <div><p class="label">Email</p><p class="value">aldomlyguyaba@gmail.com</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="ph ph-phone" style="font-size:20px"></i></div>
+              <div><p class="label">Booking</p><p class="value">+235 62 46 63 16</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="ph ph-phone" style="font-size:20px"></i></div>
+              <div><p class="label">Téléphone</p><p class="value">+235 66 58 08 69</p><p class="value">+235 62 69 02 76</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="ph ph-map-pin" style="font-size:20px"></i></div>
+              <div><p class="label">Localisation</p><p class="value">N'Djaména, Tchad</p></div>
+            </div>
+            <div style="display:flex;gap:0.75rem;margin-top:1.5rem">
+              <a href="#" aria-label="Facebook" class="contact-social-link"><i class="ph ph-facebook-logo" style="font-size:24px"></i></a>
+              <a href="#" aria-label="Instagram" class="contact-social-link"><i class="ph ph-instagram-logo" style="font-size:24px"></i></a>
+              <a href="#" aria-label="YouTube" class="contact-social-link"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a>
+            </div>
+          </div>
+          <div class="contact-card fade-right">
+            <form id="contact-form">
+              <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:1.5rem;color:var(--secondary)">Envoyer un message</h3>
+              <div class="form-grid">
+                <div class="form-group"><label>Nom complet</label><input type="text" required placeholder="Votre nom" /></div>
+                <div class="form-group"><label>Email</label><input type="email" required placeholder="votre@email.com" /></div>
+              </div>
+              <div class="form-group">
+                <label>Sujet</label>
+                <select required>
+                  <option value="">Sélectionnez un sujet</option>
+                  <option>Booking / Concert</option>
+                  <option>Interview / Média</option>
+                  <option>Collaboration</option>
+                  <option>Presse</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="form-group"><label>Message</label><textarea required rows="4" placeholder="Votre message..."></textarea></div>
+              <button type="submit" class="btn btn-dark btn-block">Envoyer le message <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== BIO ==================== -->
+  <div id="page-bio" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Bio <span class="text-secondary">complète</span></h1>
+      </div>
+    </div>
+
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="bio-hero-grid">
+          <div class="bio-hero-img">
+            <img src="img/bio.jpg" alt="Lyguy" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:2rem" />
+          </div>
+          <div>
+            <div style="display:inline-block;padding:0.375rem 1rem;border-radius:9999px;background:rgba(37,99,235,0.1);color:var(--secondary);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:1rem">Artiste · Auteur-compositeur · Interprète</div>
+            <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:2.5rem;margin-bottom:0.25rem;line-height:1.1">Aldom Guy Laohonda</h2>
+            <p style="font-size:1.25rem;color:var(--secondary);font-weight:600;margin-bottom:2rem">Lyguy</p>
+            <p style="font-size:1.05rem;line-height:1.9;color:var(--muted-foreground);margin-bottom:1.5rem">Lyguy (Aldom Guy Laohonda) est un artiste auteur-compositeur-interprète tchadien, figure de proue de la nouvelle génération musicale africaine. Né à Yaoundé le 5 mars 1998, il débute sur scène dès l'adolescence et entre en studio en 2017. Sa percée arrive en 2022 avec «Dieu ne dort pas» qui franchit le million de vues en quelques semaines.</p>
+            <p style="font-size:1.05rem;line-height:1.9;color:var(--muted-foreground);margin-bottom:2rem">Artiste indépendant basé à N'Djaména, il fusionne afrobeat moderne et RnB émotionnel pour créer un son unique, profondément ancré dans ses racines tchadiennes tout en étant résolument tourné vers l'international.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--primary);color:var(--primary-foreground)">
+      <div class="container">
+        <h2 class="section-title" style="color:#fff">Fiche <span class="text-secondary">d'identité</span></h2>
+        <div class="bio-infos-grid">
+          <div class="bio-info-item"><span class="bio-info-label">Nom</span><strong class="bio-info-value">Aldom Guy Laohonda</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Date de naissance</span><strong class="bio-info-value">5 mars 1998</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Origine</span><strong class="bio-info-value">Tchad</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Base</span><strong class="bio-info-value">N'Djaména</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Genres</span><strong class="bio-info-value">Afrobeat · RnB · Afropop · Soul</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Statut</span><strong class="bio-info-value">Indépendant</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Début de carrière</span><strong class="bio-info-value">2017</strong></div>
+          <div class="bio-info-item"><span class="bio-info-label">Révélation</span><strong class="bio-info-value">2022 — «Dieu ne dort pas»</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Parcours <span class="text-secondary">chronologique</span></h2>
+        <p class="section-subtitle">Les étapes clés de la carrière de Lyguy</p>
+        <div class="bio-timeline">
+          <div class="bio-timeline-item">
+            <div class="bio-timeline-dot"></div>
+            <div class="bio-timeline-content">
+              <span class="bio-timeline-year">1998</span>
+              <h4>Naissance à Yaoundé</h4>
+              <p>Lyguy voit le jour le 5 mars 1998 à Yaoundé, Cameroun, dans une famille tchadienne.</p>
+            </div>
+          </div>
+          <div class="bio-timeline-item">
+            <div class="bio-timeline-dot"></div>
+            <div class="bio-timeline-content">
+              <span class="bio-timeline-year">2017</span>
+              <h4>Début en studio</h4>
+              <p>Premier single «Angelina (Remix)» marque l'entrée de Lyguy dans l'industrie musicale.</p>
+            </div>
+          </div>
+          <div class="bio-timeline-item">
+            <div class="bio-timeline-dot"></div>
+            <div class="bio-timeline-content">
+              <span class="bio-timeline-year">2018</span>
+              <h4>Premier album TCHAD</h4>
+              <p>Sortie de l'album «TCHAD», 10 titres qui posent les fondations de son univers afrobeat.</p>
+            </div>
+          </div>
+          <div class="bio-timeline-item">
+            <div class="bio-timeline-dot"></div>
+            <div class="bio-timeline-content">
+              <span class="bio-timeline-year">2022</span>
+              <h4>Révélation avec «Dieu ne dort pas»</h4>
+              <p>Le single franchit le million de vues et propulse Lyguy sur le devant de la scène africaine. Sortie de l'EP «ABA».</p>
+            </div>
+          </div>
+          <div class="bio-timeline-item">
+            <div class="bio-timeline-dot"></div>
+            <div class="bio-timeline-content">
+              <span class="bio-timeline-year">2023</span>
+              <h4>Collaborations & reconnaissance</h4>
+              <p>Multi-récompensé aux DTV Awards, Lyguy collabore avec Fanicko et continue de rayonner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== DISCO ==================== -->
+  <div id="page-disco" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Discographie</h1>
+      </div>
+    </div>
+    <section style="padding-top:2rem">
+      <div class="container">
+        <h2 class="discography-type-title">Albums & EP</h2>
+        <div class="discography-grid">
+          <div class="disco-card fade-up delay-1">
+            <div class="disco-cover"><img src="img/tchad.jpg" alt="TCHAD" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div class="disco-card-header"><span class="disco-badge">Album</span><span class="disco-ear">Écouter <i class="ph ph-arrow-square-out" style="font-size:16px"></i></span></div>
+            <h3 class="disco-title">TCHAD</h3>
+            <p class="disco-meta">2018 · 10 titres</p>
+            <p class="disco-desc">Premier album de Lyguy, un projet de 10 titres qui pose les fondations de son univers afrobeat aux sonorités tchadiennes.</p>
+            <div class="disco-links">
+              <a href="#" class="disco-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i> Apple Music</a>
+              <a href="#" class="disco-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i> YouTube</a>
+              <a href="#" class="disco-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotify</a>
+            </div>
+          </div>
+          <div class="disco-card fade-up delay-2">
+            <div class="disco-cover"><img src="img/aba.jpg" alt="ABA" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div class="disco-card-header"><span class="disco-badge">EP</span><span class="disco-ear">Écouter <i class="ph ph-arrow-square-out" style="font-size:16px"></i></span></div>
+            <h3 class="disco-title">ABA</h3>
+            <p class="disco-meta">2022 · 6 titres</p>
+            <p class="disco-desc">EP de 6 titres porté par le hit «Dieu ne dort pas». Yamo, Nebah, Fortification, Salanga, Mariama.</p>
+            <div class="disco-links">
+              <a href="#" class="disco-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i> Apple Music</a>
+              <a href="#" class="disco-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i> YouTube</a>
+              <a href="#" class="disco-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotify</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="discography-type-title" style="margin-top:4rem">Singles marquants</h2>
+        <div class="singles-grid">
+          <div class="single-card fade-up delay-1">
+            <div class="single-info"><span class="single-badge">Single</span><h4 class="single-title">Angelina (Remix)</h4><span class="single-year">2017</span></div>
+            <div class="single-links"><a href="#" class="single-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i></a><a href="#" class="single-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a><a href="#" class="single-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></div>
+          </div>
+          <div class="single-card fade-up delay-2">
+            <div class="single-info"><span class="single-badge">Single</span><h4 class="single-title">Petit Vélo</h4><span class="single-year">2018</span></div>
+            <div class="single-links"><a href="#" class="single-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i></a><a href="#" class="single-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a><a href="#" class="single-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></div>
+          </div>
+          <div class="single-card fade-up delay-3">
+            <div class="single-info"><span class="single-badge">Single</span><h4 class="single-title">El Professor</h4><span class="single-year">2021</span></div>
+            <div class="single-links"><a href="#" class="single-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i></a><a href="#" class="single-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a><a href="#" class="single-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></div>
+          </div>
+          <div class="single-card fade-up delay-4">
+            <div class="single-info"><span class="single-badge">Single</span><h4 class="single-title">Dieu ne dort pas</h4><span class="single-year">2022</span></div>
+            <div class="single-links"><a href="#" class="single-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i></a><a href="#" class="single-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a><a href="#" class="single-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></div>
+          </div>
+          <div class="single-card fade-up delay-5">
+            <div class="single-info"><span class="single-badge">Single</span><h4 class="single-title">Ça va aller (feat. Fanicko)</h4><span class="single-year">2023</span></div>
+            <div class="single-links"><a href="#" class="single-link" data-toast="Apple Music"><i class="ph ph-apple-logo" style="font-size:20px"></i></a><a href="#" class="single-link" data-toast="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a><a href="#" class="single-link" data-toast="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== AGENDA ==================== -->
+  <div id="page-agenda" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Agenda</h1>
+        <p class="section-subtitle">Prochains concerts — toutes les dates à venir de Lyguy sur scène.</p>
+      </div>
+    </div>
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="agenda-list">
+          <div class="agenda-card fade-up delay-1">
+            <div class="agenda-date"><span class="agenda-day">12</span><span class="agenda-month">Juil.</span></div>
+            <div class="agenda-info"><h4>Institut Français du Tchad</h4><p>N'Djaména, Tchad</p></div>
+            <span class="agenda-status" style="color:#22c55e;border-color:#22c55e">Confirmé</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Institut Français du Tchad">Infos →</button>
+          </div>
+          <div class="agenda-card fade-up delay-2">
+            <div class="agenda-date"><span class="agenda-day">26</span><span class="agenda-month">Août</span></div>
+            <div class="agenda-info"><h4>Douala Music Fest</h4><p>Douala, Cameroun</p></div>
+            <span class="agenda-status" style="color:#22c55e;border-color:#22c55e">Confirmé</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Douala Music Fest">Infos →</button>
+          </div>
+          <div class="agenda-card fade-up delay-3">
+            <div class="agenda-date"><span class="agenda-day">05</span><span class="agenda-month">Sept.</span></div>
+            <div class="agenda-info"><h4>Festival Koura Gosso</h4><p>Yaoundé, Cameroun</p></div>
+            <span class="agenda-status" style="color:#f59e0b;border-color:#f59e0b">En attente</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Festival Koura Gosso">Infos →</button>
+          </div>
+          <div class="agenda-card fade-up delay-4">
+            <div class="agenda-date"><span class="agenda-day">18</span><span class="agenda-month">Oct.</span></div>
+            <div class="agenda-info"><h4>Libreville Afrobeat Night</h4><p>Libreville, Gabon</p></div>
+            <span class="agenda-status" style="color:#22c55e;border-color:#22c55e">Confirmé</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Libreville Afrobeat Night">Infos →</button>
+          </div>
+          <div class="agenda-card fade-up delay-5">
+            <div class="agenda-date"><span class="agenda-day">02</span><span class="agenda-month">Nov.</span></div>
+            <div class="agenda-info"><h4>Bangui Music Showcase</h4><p>Bangui, Centrafrique</p></div>
+            <span class="agenda-status" style="color:#3b82f6;border-color:#3b82f6">En négo</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Bangui Music Showcase">Infos →</button>
+          </div>
+          <div class="agenda-card fade-up delay-6">
+            <div class="agenda-date"><span class="agenda-day">15</span><span class="agenda-month">Déc.</span></div>
+            <div class="agenda-info"><h4>Scène Africaine à Paris</h4><p>Paris, France</p></div>
+            <span class="agenda-status" style="color:#ef4444;border-color:#ef4444">Complet</span>
+            <button class="btn btn-dark btn-sm agenda-btn" data-toast="Scène Africaine à Paris">Infos →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== ACTUALITÉ ==================== -->
+  <div id="page-actualite" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Actualités</h1>
+        <p class="section-subtitle">Articles, interviews et chroniques Lyguy</p>
+      </div>
+    </div>
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="actus-full-grid">
+          <div class="actus-full-card">
+            <div class="actus-visual"><img src="img/gallery-05.jpg" alt="RFI" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">RFI</span>
+              <span class="actus-date">7 août 2022</span>
+              <h4>Lyguy, le tchadien qui monte</h4>
+              <p>Portrait de l'artiste tchadien Lyguy, révélation afrobeat qui enchaîne les succès avec son single «Dieu ne dort pas».</p>
+              <a href="#" class="btn btn-primary btn-sm" data-toast="Lire l'article">Lire l'article <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+            </div>
+          </div>
+          <div class="actus-full-card">
+            <div class="actus-visual"><img src="img/gallery-06.jpg" alt="People237" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">People237</span>
+              <span class="actus-date">2022</span>
+              <h4>Lyguy : la nouvelle sensation de la musique tchadienne</h4>
+              <p>Rencontre avec l'artiste qui fait danser le Tchad et au-delà avec son afrobeat moderne et ses textes porteurs d'espoir.</p>
+              <a href="#" class="btn btn-primary btn-sm" data-toast="Lire l'article">Lire l'article <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+            </div>
+          </div>
+          <div class="actus-full-card">
+            <div class="actus-visual"><img src="img/gallery-07.jpg" alt="CamerounActu" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">CamerounActu</span>
+              <span class="actus-date">2022</span>
+              <h4>Dieu ne dort pas : le tube qui propulse Lyguy au sommet</h4>
+              <p>Analyse du phénomène «Dieu ne dort pas» et de l'ascension fulgurante de Lyguy sur la scène musicale africaine.</p>
+              <a href="#" class="btn btn-primary btn-sm" data-toast="Lire l'article">Lire l'article <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+            </div>
+          </div>
+          <div class="actus-full-card">
+            <div class="actus-visual"><img src="img/gallery-08.jpg" alt="DTV Awards" loading="lazy" /></div>
+            <div class="actus-body">
+              <span class="actus-outlet">DTV Awards</span>
+              <span class="actus-date">2023</span>
+              <h4>Lyguy multi-récompensé aux DTV Awards</h4>
+              <p>L'artiste tchadien repart avec plusieurs distinctions, confirmant son statut de figure montante de la musique au Tchad.</p>
+              <a href="#" class="btn btn-primary btn-sm" data-toast="Lire l'article">Lire l'article <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== GALERIE ==================== -->
+  <div id="page-galerie" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Galerie</h1>
+        <p class="section-subtitle">Photos haute résolution pour utilisations éditoriales et promotionnelles.</p>
+      </div>
+    </div>
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="galerie-grid">
+          <div class="galerie-item fade-up delay-1"><img src="img/gallery-01.jpg" alt="Lyguy - Photo 1" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-2"><img src="img/gallery-02.jpg" alt="Lyguy - Photo 2" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-3"><img src="img/gallery-03.jpg" alt="Lyguy - Photo 3" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-4"><img src="img/gallery-04.jpg" alt="Lyguy - Photo 4" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-5"><img src="img/gallery-05.jpg" alt="Lyguy - Photo 5" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-6"><img src="img/gallery-06.jpg" alt="Lyguy - Photo 6" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-1"><img src="img/gallery-07.jpg" alt="Lyguy - Photo 7" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-2"><img src="img/gallery-08.jpg" alt="Lyguy - Photo 8" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-3"><img src="img/gallery-09.jpg" alt="Lyguy - Photo 9" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-4"><img src="img/gallery-10.jpg" alt="Lyguy - Photo 10" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-5"><img src="img/gallery-11.jpg" alt="Lyguy - Photo 11" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div class="galerie-item fade-up delay-6"><img src="img/gallery-12.jpg" alt="Lyguy - Photo 12" loading="lazy" style="width:100%;height:100%;object-fit:cover" /></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== UNIVERS ==================== -->
+  <div id="page-univers" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Univers <span class="text-secondary">artistique</span></h1>
+        <p class="section-subtitle">Son, message, influences — découvrez l'univers de Lyguy.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="univers-hero-grid">
+          <div class="univers-hero-text">
+            <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;margin-bottom:1rem">L'univers <span class="text-secondary">Lyguy</span></h2>
+            <p style="font-size:1.05rem;line-height:1.8;color:var(--muted-foreground);margin-bottom:1.5rem">Lyguy puise son inspiration dans ses racines tchadiennes, la foi et la résilience. Sa musique est un pont entre l'Afrique traditionnelle et la modernité, portée par des mélodies afrobeat et des textes qui parlent d'espoir, de foi et de réussite sociale.</p>
+            <div style="display:flex;gap:2rem;flex-wrap:wrap">
+              <div><strong style="font-size:2rem;color:var(--secondary)">3</strong><p style="font-size:0.85rem;color:var(--muted-foreground)">Albums & EP</p></div>
+              <div><strong style="font-size:2rem;color:var(--secondary)">5</strong><p style="font-size:0.85rem;color:var(--muted-foreground)">Singles</p></div>
+              <div><strong style="font-size:2rem;color:var(--secondary)">+1M</strong><p style="font-size:0.85rem;color:var(--muted-foreground)">Vues</p></div>
+            </div>
+          </div>
+          <div style="border-radius:1.5rem;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 40px rgba(0,0,0,0.1)">
+            <img src="img/univers.jpg" alt="Univers Lyguy" loading="lazy" style="width:100%;height:100%;object-fit:cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--primary);color:var(--primary-foreground)">
+      <div class="container">
+        <h2 class="section-title" style="color:#fff">Son & <span class="text-secondary">message</span></h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">Les piliers de la musique de Lyguy</p>
+        <div class="univers-piliers">
+          <div class="univ-pilier">
+            <div style="width:3rem;height:3rem;border-radius:0.75rem;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:var(--secondary)"><i class="ph ph-music-notes" style="font-size:24px"></i></div>
+            <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.5rem">Afrobeat moderne</h3>
+            <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.7">Fusion de rythmes africains contemporains et de production internationale.</p>
+          </div>
+          <div class="univ-pilier">
+            <div style="width:3rem;height:3rem;border-radius:0.75rem;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:var(--secondary)"><i class="ph ph-heart" style="font-size:24px"></i></div>
+            <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.5rem">RnB émotionnel</h3>
+            <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.7">Mélodies sensibles qui touchent un large public, au-delà des frontières.</p>
+          </div>
+          <div class="univ-pilier">
+            <div style="width:3rem;height:3rem;border-radius:0.75rem;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:var(--secondary)"><i class="ph ph-globe" style="font-size:24px"></i></div>
+            <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.5rem">Identité africaine</h3>
+            <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.7">Racines culturelles fortes comme signature artistique authentique.</p>
+          </div>
+          <div class="univ-pilier">
+            <div style="width:3rem;height:3rem;border-radius:0.75rem;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:var(--secondary)"><i class="ph ph-handshake" style="font-size:24px"></i></div>
+            <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.5rem">Message positif</h3>
+            <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.7">Espoir, foi et réussite sociale au cœur de chaque morceau.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Positionnement <span class="text-secondary">stratégique</span></h2>
+        <p class="section-subtitle">Comment Lyguy se distingue sur la scène musicale</p>
+        <div class="univers-pos-grid">
+          <div class="u-card" style="background:var(--card);border-radius:1.5rem;padding:2rem;border:1px solid var(--border)">
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+              <span class="u-tag" style="background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2);color:var(--secondary)">Exportable</span>
+              <span class="u-tag" style="background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2);color:var(--secondary)">Digital-friendly</span>
+              <span class="u-tag" style="background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2);color:var(--secondary)">Ciblage jeunesse</span>
+              <span class="u-tag" style="background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2);color:var(--secondary)">Image clean</span>
+            </div>
+            <p style="font-size:0.95rem;color:var(--muted-foreground);line-height:1.7">Une image inspirante et positive qui résonne auprès de la jeunesse africaine (15-35 ans) et de la diaspora, avec un fort engagement sur les réseaux sociaux.</p>
+          </div>
+          <div class="u-card" style="background:var(--card);border-radius:1.5rem;padding:2rem;border:1px solid var(--border)">
+            <h3 style="font-size:1.25rem;margin-bottom:1rem;font-family:'Syne',sans-serif">Collaborations</h3>
+            <p style="font-size:0.95rem;color:var(--muted-foreground);margin-bottom:1.5rem">Ils ont travaillé avec Lyguy :</p>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem">
+              <span class="u-tag">Fanicko</span>
+              <span class="u-tag">Abdoulaye Nderguet</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="showToast('Collaboration','Contactez-nous pour proposer une collaboration.')">Proposer une collaboration <i class="ph ph-arrow-right" style="font-size:20px"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== BOUTIQUE ==================== -->
+  <div id="page-boutique" class="page">
+    <div class="page-header">
+      <div class="container">
+        <button class="btn-back" onclick="navigate('home')"><i class="ph ph-caret-left" style="font-size:20px"></i> Retour</button>
+        <h1 class="section-title">Boutique <span class="text-secondary">Lyguy</span></h1>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">Albums, packs et produits dérivés.</p>
+      </div>
+    </div>
+    <section style="padding-top:2rem">
+      <div class="container">
+        <div class="boutique-grid">
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/tchad.jpg" alt="TCHAD" loading="lazy" /></div>
+            <div class="boutique-badge">Album</div>
+            <div class="boutique-body"><h4>TCHAD</h4><span class="boutique-price">10 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20TCHAD" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/aba.jpg" alt="ABA" loading="lazy" /></div>
+            <div class="boutique-badge">EP</div>
+            <div class="boutique-body"><h4>ABA</h4><span class="boutique-price">8 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20ABA" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/tchad.jpg" alt="Pack TCHAD + ABA" loading="lazy" /></div>
+            <div class="boutique-badge">Pack</div>
+            <div class="boutique-body"><h4>Pack TCHAD + ABA</h4><span class="boutique-price">15 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20Pack%20TCHAD%20%2B%20ABA" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/gallery-11.jpg" alt="Poster Lyguy" loading="lazy" /></div>
+            <div class="boutique-badge">Merch</div>
+            <div class="boutique-body"><h4>Poster Lyguy</h4><span class="boutique-price">7 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20Poster%20Lyguy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/gallery-10.jpg" alt="T-shirt Lyguy" loading="lazy" /></div>
+            <div class="boutique-badge">Merch</div>
+            <div class="boutique-body"><h4>T-shirt Lyguy</h4><span class="boutique-price">17 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20T-shirt%20Lyguy" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+          <div class="boutique-card">
+            <div class="boutique-img"><img src="img/aba.jpg" alt="Digipack ABA" loading="lazy" /></div>
+            <div class="boutique-badge">Édition limitée</div>
+            <div class="boutique-body"><h4>Digipack ABA</h4><span class="boutique-price">12 000 FCFA</span></div>
+            <a href="https://wa.me/23563935784?text=Bonjour%2C%20je%20souhaite%20commander%20Digipack%20ABA" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ajouter au panier <i class="ph ph-arrow-right" style="font-size:20px"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Press Kit Bar -->
+  <div class="presskit-bar">
+    <div class="container presskit-bar-inner">
+      <span id="copyConfirm" style="display:none"><i class="ph ph-copy-simple" style="font-size:16px"></i> Lien copié !</span>
+      <span>Press Kit — Lyguy</span>
+      <span>Mis à jour — 2026</span>
+      <button class="btn btn-outline btn-sm" onclick="copyLink()"><i class="ph ph-copy-simple" style="font-size:16px"></i> Copier le lien</button>
+      <button class="btn btn-primary btn-sm" data-toast="Press Kit"><i class="ph ph-download-simple" style="font-size:24px"></i> Télécharger</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="decor"></div>
+    <div class="container">
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" style="font-size:24px"></i></a>
+        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size:24px"></i></a>
+        <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo" style="font-size:24px"></i></a>
+        <a href="#" aria-label="Spotify"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+      </div>
+      <div class="footer-bottom"><p>© Lyguy / Chelka Concept — Tous droits réservés</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
